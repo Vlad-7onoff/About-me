@@ -256,6 +256,12 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+        
+        .game__gif, .card__gif {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
@@ -352,8 +358,9 @@
                     <div class="steam-game works-card">
                         <div class="game__content">
                             <div class="game__media" id="nibiru-media">
-                                <img src="assets/gifs/ProjectGif/Nibiru.gif" alt="Nibiru Gameplay" class="game__gif"
-                                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22450%22%3E%3Crect width=%22800%22 height=%22450%22 fill=%22%23FAC6A7%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2224%22 fill=%22white%22%3ENibiru GIF%3C/text%3E%3C/svg%3E'">
+                                <video class="game__gif" autoplay loop muted playsinline style="width: 100%;">
+                                    <source src="assets/video/PreviewProjects/NIBIRU.mp4" type="video/mp4">
+                                </video>
                             </div>
                             
                             <div class="game__info">
@@ -368,10 +375,6 @@
                                     <span class="tag">C#</span>
                                     <span class="tag">Photon</span>
                                 </div>
-                                
-                                <button class="btn btn-steam neo-button" onclick="toggleVideo('nibiru')">
-                                    Watch Trailer →
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -386,8 +389,9 @@
                     <div class="steam-game works-card">
                         <div class="game__content">
                             <div class="game__media" id="inreal-media">
-                                <img src="assets/gifs/ProjectGif/Inreal.gif" alt="Inreal VR Gameplay" class="game__gif"
-                                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22450%22%3E%3Crect width=%22800%22 height=%22450%22 fill=%22%23ACA7FA%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2224%22 fill=%22white%22%3EInreal GIF%3C/text%3E%3C/svg%3E'">
+                                <video class="game__gif" autoplay loop muted playsinline style="width: 100%;">
+                                    <source src="assets/video/PreviewProjects/INREAL.mp4" type="video/mp4">
+                                </video>
                             </div>
                             
                             <div class="game__info">
@@ -402,10 +406,6 @@
                                     <span class="tag">VR</span>
                                     <span class="tag">Shaders</span>
                                 </div>
-                                
-                                <button class="btn btn-steam neo-button" onclick="toggleVideo('inreal')">
-                                    Watch Trailer →
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -420,8 +420,9 @@
                     <div class="works__grid">
                         <div class="work-card azur-card">
                             <div class="card__media">
-                                <img src="assets/gifs/PlayableGif/TankStars.gif" alt="TANK Playable" class="card__gif"
-                                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22225%22 height=%22400%22%3E%3Crect width=%22225%22 height=%22400%22 fill=%22%23ACA7FA%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 fill=%22white%22%3ETANK GIF%3C/text%3E%3C/svg%3E'">
+                                <video class="card__gif" autoplay loop muted playsinline style="width: 100%;">
+                                    <source src="assets/video/PreviewPlayables/TANK.mp4" type="video/mp4">
+                                </video>
                             </div>
                             <div class="card__content">
                                 <h4 class="card__title">Tank Stars</h4>
@@ -436,8 +437,9 @@
                         
                         <div class="work-card azur-card">
                             <div class="card__media">
-                                <img src="assets/gifs/PlayableGif/Arrow.gif" alt="ARROW Playable" class="card__gif"
-                                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22225%22 height=%22400%22%3E%3Crect width=%22225%22 height=%22400%22 fill=%22%23FAC6A7%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 fill=%22white%22%3EARROW GIF%3C/text%3E%3C/svg%3E'">
+                                <video class="card__gif" autoplay loop muted playsinline style="width: 100%;">
+                                    <source src="assets/video/PreviewPlayables/ARROW.mp4" type="video/mp4">
+                                </video>
                             </div>
                             <div class="card__content">
                                 <h4 class="card__title">Arrow</h4>
@@ -452,8 +454,9 @@
                         
                         <div class="work-card azur-card">
                             <div class="card__media">
-                                <img src="assets/gifs/PlayableGif/WWH.gif" alt="WWH Playable" class="card__gif"
-                                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22225%22 height=%22400%22%3E%3Crect width=%22225%22 height=%22400%22 fill=%22%23ACA7FA%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 fill=%22white%22%3EWWH GIF%3C/text%3E%3C/svg%3E'">
+                                <video class="card__gif" autoplay loop muted playsinline style="width: 100%;">
+                                    <source src="assets/video/PreviewPlayables/WWH.mp4" type="video/mp4">
+                                </video>
                             </div>
                             <div class="card__content">
                                 <h4 class="card__title">WWH</h4>
@@ -468,8 +471,9 @@
                         
                         <div class="work-card azur-card">
                             <div class="card__media">
-                                <img src="assets/gifs/PlayableGif/Archer.gif" alt="ARCHER Playable" class="card__gif"
-                                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22225%22 height=%22400%22%3E%3Crect width=%22225%22 height=%22400%22 fill=%22%23FAC6A7%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 fill=%22white%22%3EARCHER GIF%3C/text%3E%3C/svg%3E'">
+                                <video class="card__gif" autoplay loop muted playsinline style="width: 100%;">
+                                    <source src="assets/video/PreviewPlayables/ARCHER.mp4" type="video/mp4">
+                                </video>
                             </div>
                             <div class="card__content">
                                 <h4 class="card__title">Archer</h4>
@@ -484,8 +488,9 @@
                         
                         <div class="work-card azur-card">
                             <div class="card__media">
-                                <img src="assets/gifs/PlayableGif/Grass.gif" alt="GRASS Playable" class="card__gif"
-                                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22225%22 height=%22400%22%3E%3Crect width=%22225%22 height=%22400%22 fill=%22%23ACA7FA%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 fill=%22white%22%3EGRASS GIF%3C/text%3E%3C/svg%3E'">
+                                <video class="card__gif" autoplay loop muted playsinline style="width: 100%;">
+                                    <source src="assets/video/PreviewPlayables/GRASS.mp4" type="video/mp4">
+                                </video>
                             </div>
                             <div class="card__content">
                                 <h4 class="card__title">Grass</h4>
@@ -500,8 +505,9 @@
                         
                         <div class="work-card azur-card">
                             <div class="card__media">
-                                <img src="assets/gifs/PlayableGif/Knight.gif" alt="KNIGHT Playable" class="card__gif"
-                                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22225%22 height=%22400%22%3E%3Crect width=%22225%22 height=%22400%22 fill=%22%23FAC6A7%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 fill=%22white%22%3EKNIGHT GIF%3C/text%3E%3C/svg%3E'">
+                                <video class="card__gif" autoplay loop muted playsinline style="width: 100%;">
+                                    <source src="assets/video/PreviewPlayables/KNIGHT.mp4" type="video/mp4">
+                                </video>
                             </div>
                             <div class="card__content">
                                 <h4 class="card__title">Knight</h4>
@@ -513,6 +519,8 @@
                                 </a>
                             </div>
                         </div>
+                        
+
                     </div>
                 </div>
             </div>
@@ -572,25 +580,6 @@
     <script src="js/main.js"></script>
     
     <script>
-        function toggleVideo(project) {
-            const mediaDiv = document.getElementById(project + '-media');
-            const currentContent = mediaDiv.innerHTML;
-            
-            if (currentContent.includes('<video')) {
-                mediaDiv.innerHTML = currentContent;
-            } else {
-                const videoPath = project === 'nibiru' 
-                    ? 'assets/video/NibiruVid.mp4' 
-                    : 'assets/video/IntrealVid.mp4';
-                
-                mediaDiv.innerHTML = `
-                    <video class="game__gif" autoplay loop muted playsinline controls style="width: 100%;">
-                        <source src="${videoPath}" type="video/mp4">
-                    </video>
-                `;
-            }
-        }
-        
         function initScrollIndicator() {
             const indicator = document.getElementById('scroll-indicator');
             
