@@ -1,0 +1,409 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        /*transform: translateY(40px);*/
+    }
+    to {
+        opacity: 1;
+        /*transform: translateY(0);*/
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(2deg);
+    }
+}
+
+.header {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.nav__link {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.nav__link:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.nav__link:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.nav__link:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.nav__link:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.home__title {
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+}
+
+.animate-fade-in {
+    opacity: 0;
+}
+
+.animate-fade-in.animated {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.animate-fade-up.animated {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-slide-left {
+    opacity: 0;
+    transform: translateX(-60px);
+}
+
+.animate-slide-left.animated {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+    opacity: 0;
+    transform: translateX(60px);
+}
+
+.animate-slide-right.animated {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-scale {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.animate-scale.animated {
+    animation: scaleIn 0.8s ease-out forwards;
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+}
+
+.card__media,
+.game__media,
+.project__media {
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.card__gif,
+.game__gif,
+.project__gif {
+    transition: transform 0.5s ease;
+}
+
+.btn {
+    position: relative;
+    overflow: visible;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-text);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.btn:hover::after {
+    opacity: 0.1;
+}
+
+.skeleton {
+    background: repeating-linear-gradient(
+        90deg,
+        var(--color-border) 0px,
+        var(--color-border) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    animation: skeleton-slide 1s linear infinite;
+}
+
+@keyframes skeleton-slide {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 20px 0;
+    }
+}
+
+.works__grid .work-card {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.works__grid .work-card:nth-child(1) { animation-delay: 0.1s; }
+.works__grid .work-card:nth-child(2) { animation-delay: 0.2s; }
+.works__grid .work-card:nth-child(3) { animation-delay: 0.3s; }
+.works__grid .work-card:nth-child(4) { animation-delay: 0.4s; }
+.works__grid .work-card:nth-child(5) { animation-delay: 0.5s; }
+.works__grid .work-card:nth-child(6) { animation-delay: 0.6s; }
+
+
+.block__icon {
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+.home__block:nth-child(1) .block__icon {
+    animation-delay: 0s;
+}
+
+.home__block:nth-child(2) .block__icon {
+    animation-delay: 0.5s;
+}
+
+.contact__icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover .contact__icon {
+    transform: scale(1.2);
+}
+
+.tag {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.tag:hover {
+    transform: translateY(-2px);
+}
+
+.copy-btn {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.copy-btn.copied {
+    background: var(--color-secondary);
+    color: var(--color-text);
+    animation: pulse 0.3s ease-out;
+    border-color: var(--color-border);
+}
+
+.stat__number {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.stat__item:hover .stat__number {
+    transform: scale(1.1);
+}
+
+.parallax-element {
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+}
+
+.text-underline-effect {
+    position: relative;
+    display: inline-block;
+}
+
+.text-underline-effect::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    transition: width 0.3s ease;
+}
+
+.text-underline-effect:hover::after {
+    width: 100%;
+}
+
+.section__title {
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.section__title::after {
+    transform: scaleX(0);
+    animation: scaleX 0.6s ease-out 0.4s forwards;
+}
+
+@keyframes scaleX {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.nav__menu {
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav__menu.show .nav__link {
+    animation: slideInLeft 0.3s ease-out forwards;
+}
+
+.nav__menu.show .nav__link:nth-child(1) { animation-delay: 0.1s; }
+.nav__menu.show .nav__link:nth-child(2) { animation-delay: 0.15s; }
+.nav__menu.show .nav__link:nth-child(3) { animation-delay: 0.2s; }
+.nav__menu.show .nav__link:nth-child(4) { animation-delay: 0.25s; }
+
+@media screen and (max-width: 768px) {
+    .card__gif,
+    .game__gif,
+    .project__gif {
+        transition: none;
+    }
+    
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .block__icon,
+    .parallax-element {
+        animation: none !important;
+        transform: none !important;
+    }
+}
+
+.typing-cursor::after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+    margin-left: 4px;
+}
+
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 8px;
+    background: var(--color-primary);
+    border-bottom: 3px solid var(--color-border);
+    z-index: 9999;
+    transform-origin: left;
+    transition: transform 0.1s ease-out;
+}
+
+.neo-card,
+.work-card,
+.btn,
+.parallax-element {
+    will-change: transform;
+}
+
+.static-element {
+    will-change: auto;
+}
