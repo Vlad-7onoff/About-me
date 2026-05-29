@@ -411,9 +411,14 @@
                                     <span class="tag">PICO</span>
                                 </div>
                                 
-                                <button class="btn btn-steam neo-button" onclick="toggleVideo('inreal')">
-                                    Watch Trailer →
-                                </button>
+                                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <button class="btn btn-steam neo-button" onclick="toggleVideo('inreal')">
+                                        Watch Trailer →
+                                    </button>
+                                    <a href="https://www.meta.com/ru-ru/experiences/inreal/3673548406073848/?utm_source=away.vk.com&utm_medium=oculusredirect" target="_blank" class="btn btn-steam neo-button">
+                                        View on Meta →
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -599,16 +604,14 @@
             const currentContent = mediaDiv.innerHTML;
             const posterPath = `assets/images/ProjectPoster/${project.toUpperCase()}POSTER.jpg`;
             
-            // YouTube video IDs
             const youtubeIds = {
                 nibiru: 'ccApEN-pnaI',
-                inreal: null // Пока нет YouTube ID для Inreal
+                inreal: null
             };
             
             const youtubeId = youtubeIds[project];
             
             if (currentContent.includes('controls') || currentContent.includes('youtube.com')) {
-                // Возвращаемся к превью
                 mediaDiv.innerHTML = `
                     <video class="game__gif" autoplay loop muted playsinline style="width: 100%;" poster="${posterPath}">
                         <source src="assets/video/WebPreviewProjects/${project.toUpperCase()}.webm" type="video/webm">
@@ -617,21 +620,19 @@
                 `;
             } else {
                 if (youtubeId) {
-                    // Используем YouTube
                     mediaDiv.innerHTML = `
                         <iframe 
                             width="100%" 
-                            height="400" 
+                            height="600" 
                             src="https://www.youtube.com/embed/${youtubeId}" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin"
                             allowfullscreen
-                            style="border: 5px solid var(--color-border); width: 100%; height: 400px;"
+                            style="border: 5px solid var(--color-border); width: 100%; height: 600px;"
                         ></iframe>
                     `;
                 } else {
-                    // Остаёмся на локальных файлах для Inreal
                     const videoPaths = project === 'nibiru' 
                         ? { webm: 'assets/video/NibiruvidW.webm', mp4: 'assets/video/NibiruVid.mp4' } 
                         : { webm: 'assets/video/IntrealVidW.webm', mp4: 'assets/video/IntrealVid.mp4' };
